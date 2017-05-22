@@ -1,0 +1,778 @@
+/*-------------------------------------
+GLOBAL STYLES
+-------------------------------------*/
+
+/* ------ Global tags ------ */
+
+* {
+  box-sizing: border-box;
+}
+
+body, main, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  font-size: 1.5rem;
+  font-family: 'Maven Pro', monospace;
+  color: #2B2D42;
+  line-height: 1.5;
+}
+
+main {
+  height: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #461e8e;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+h4 {
+  font-weight: 500;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+  margin: 2rem 0 0 0;
+}
+
+/* --- Clearfix --- */
+
+.cf:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/*-------------------------------------
+SPECIFIC STYLES
+-------------------------------------*/
+
+/* ------ Entire page ------ */
+
+body {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.page {
+  height: 100%;
+  background: #FFF;
+}
+
+/*-- Fixed border --- */
+
+.border {
+  display: none;
+  background: #2B2D42;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.border-top, .border-bottom {
+  left: 0; right: 0;
+  height: 15px;
+}
+.border-top { top: 0; }
+.border-bottom { bottom: 0; }
+
+.border-left, .border-right {
+  top: 0; bottom: 0;
+  width: 15px;
+}
+.border-left { left: 0; }
+.border-right { right: 0; }
+
+/* ------ Navbar ------ */
+
+.navbar {
+  position: fixed;
+  background: #EDF2F4;
+  width: 100%;
+  top: 0;
+  font-size: 1.2rem;
+  z-index: 6;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.navbar ul {
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar li:first-child {
+  display: none;
+}
+
+.navbar a {
+  position: relative;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.link-selected,
+.js-selected {
+  color: #FFF;
+  background: #461e8e;
+}
+/*
+.js-selected {
+  font-weight: 700;
+  color: #FFF;
+  background: #EF233C;
+}*/
+
+/* ------ Main content area ------ */
+
+.content {
+  height: 100%;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 7.5rem 0rem;
+  max-width: 750px;
+  width: 90%;
+  text-align: center;
+}
+
+.js-section {
+  z-index: 1;
+}
+
+/* --- Welcome (Hi) --- */
+
+.welcome {
+  height: 100%;
+}
+
+.welcome .container {
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.welcome .text {
+  margin: 0 auto;
+  width: 280px;
+  text-align: center;
+}
+
+.welcome h2 {
+  font: 1.8rem 'Bungee Hairline', sans-serif
+}
+
+.welcome h1 {
+  margin: 0 auto;
+  word-wrap: break-word;
+  font-family: 'Shrikhand', cursive;
+}
+
+/* --- About --- */
+
+.about {
+  background: #2B2D42;
+  color: #fff;
+}
+
+.bio {
+  margin-bottom: 4rem;
+}
+
+.skills ul {
+  margin: 2rem 0 0 0;
+}
+
+.skills li {
+  margin: 1rem 0 0 0;
+}
+
+/* --- Experience --- */
+
+.job {
+  margin: 0 auto 4rem;
+  max-width: 55rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+  .company-logo {
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .company-logo img {
+    vertical-align: middle;
+  }
+
+  .company-logo a {
+    display: inline-block;
+  }
+
+    .digitalcrafts-logo {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .wunderman-logo {
+      width: 100%;
+      max-width: 280px;
+    }
+
+.job-description .header,
+.job-description .cv {
+  margin: 2rem 0 0;
+}
+
+.job-description .cv {
+  padding-left: 2rem;
+  list-style: circle;
+}
+
+/* --- Projects --- */
+
+.projects {
+  background: #2B2D42;
+}
+
+.project-tile {
+  margin: 1rem .5rem;
+  display: inline-block;
+  background: #EDF2F4;
+  max-width: 270px;
+  max-height: 270px;
+}
+
+.project-tile figure {
+  margin: 0;
+  position: relative;
+}
+
+.project-tile img {
+  padding: 10px;
+  width: 100%;
+}
+
+.project-tile-overlay {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  height: 100%;
+  max-height: 270px;
+  width: 100%;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  backface-visibility: hidden;
+  background: rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Top half of project tile overlay */
+.project-description {
+  padding: 10px 10px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+}
+
+  .project-description p {
+    margin: 0;
+  }
+
+/* Bottom half of project tile overlay */
+  .project-links span {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%)
+  }
+
+  .project-links a {
+    float: left;
+    width: 50%;
+    text-align: center;
+    height: 65px;
+    display: inline-block;
+    background: #EDF2F4;
+    color: #2B2D42;
+    text-decoration: none;
+  }
+
+  .project-links a:visited {
+    color: #2B2D42;
+  }
+
+  .project-links a:focus {
+    color: #2B2D42;
+  }
+
+  .project-links a:hover {
+    color: #FFF;
+    background: #461e8e;
+  }
+
+  .project-links::after {
+    position: absolute;
+    left: 50%;
+    height: 65px;
+    width: 1px;
+    background: rgba(0,0,0,0.7);
+  }
+
+
+
+/* --- Contact --- */
+
+.social-icons li {
+  float: left;
+  margin: 4rem 0 0;
+  width: 33.33%;
+  text-align: center;
+}
+
+.social-icons a {
+  display: block;
+  font-size: 4rem;
+  color: #2B2D42;
+  text-decoration: none;
+}
+
+.social-icons a:visited {
+  color: #2B2D42;
+}
+
+.social-icons a:hover {
+  color: #FFF;
+  background: #461e8e;
+}
+
+.social-icons a:active {
+  color: #FFF;
+  background: #461e8e;
+}
+
+.social-icons span {
+  display: block;
+  padding-bottom: 1rem;
+  font-size: 1.4rem
+}
+
+/*-------------------------------------
+MEDIA QUERIES
+-------------------------------------*/
+
+@media screen and (min-width: 500px) {
+
+  /* --- Navbar --- */
+
+  .navbar {
+    font-size: 1.4rem;
+  }
+
+  .navbar a {
+    padding: 1.5rem 2rem;
+  }
+
+  /* --- Welcome (Hi) --- */
+
+  .welcome .text {
+    width: auto;
+  }
+
+    .welcome h2 {
+      font-size: 2.8rem;
+    }
+
+    .welcome h1 {
+      word-wrap: normal;
+    }
+
+  /* --- About --- */
+
+  .about p {
+    margin-left: auto;
+    margin-right: auto;
+    /*max-width: 550px;*/
+    width: 80%;
+  }
+
+  /* --- Experience --- */
+
+  .skills li {
+    float: left;
+    width: 50%;
+  }
+
+  /* --- Contacts --- */
+
+  .social-icons a {
+    font-size: 5rem;
+  }
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+  html {
+    font-size: 70%;
+  }
+
+  body {
+    ght: 768px;
+  }
+
+  /* --- Navbar --- */
+
+  .navbar a {
+    padding: 2rem 4rem;
+  }
+
+  /* --- Main content area --- */
+
+  .container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 750px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+
+  .js-section {
+    height: 100%;
+  }
+
+  /* --- Welcome (Hi) --- */
+
+  .welcome h2 {
+    /*font-size: 3.5rem;*/
+  }
+
+  .welcome h1 {
+    font-size: 9rem;
+  }
+
+  /* --- About --- */
+
+  .about {
+    background: #2B2D42;
+    color: #fff;
+  }
+
+  /* --- Experience --- */
+
+  .experience {
+    min-height: 900px;
+  }
+
+  .experience .container {
+
+  }
+
+  /* --- Projecs --- */
+
+  .projects {
+    min-height: 900px;
+    background: #2B2D42;
+  }
+
+  .projects .container {
+    max-width: 800px;
+  }
+
+}
+
+
+@media screen and (min-width: 1100px) {
+
+  /* --- Entire page --- */
+
+  body {
+    min-height: 600px;
+  }
+
+  .border {
+    display: block;
+  }
+
+  .navbar a:active {
+    color: #FFF;
+    background: #461e8e;
+  }
+
+  /* --- Navbar --- */
+
+  .navbar {
+    background: #EDF2F4;
+    float: left;
+    padding: 15px 0 15px 15px;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    position: relative;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar ul {
+    width: 100%;
+  }
+
+  .navbar li {
+    margin: 1.5rem 0;
+    display: block;
+  }
+
+  .navbar li:first-child {
+    display: block;
+  }
+
+  .navbar a {
+    position: relative;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+  }
+
+  .navbar a:hover {
+    color: #FFF;
+    background: #461e8e;
+  }
+
+  .navbar a:active {
+    top: 1px;
+    vertical-align: top;
+  }
+
+  /* --- Main content area --- */
+
+  main {
+    float: right;
+    padding: 15px 15px 15px 0;
+    width: 80%;
+    height: 100%;
+    position: relative;
+  }
+
+  .content {
+    height: 100%;
+    position: relative;
+  }
+
+  .container {
+    padding: 0;
+    width: 100%;
+    max-width: none;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+  }
+
+  .js-section {
+    position: absolute;
+    background: white !important;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* --- Welcome (Hi) --- */
+
+  .welcome {
+    z-index: 1;
+  }
+
+  .welcome .text {
+    padding: 0 4rem;
+  }
+
+    .welcome h2 {
+      font-size: 3.5rem;
+    }
+
+    .welcome h1 {
+      width: auto;
+      font-size: 10rem;
+    }
+
+
+  /* --- About --- */
+
+  .about {
+    color: #2B2D42;
+    z-index: 2;
+  }
+
+  .about .container {
+    max-width: 750px;
+  }
+
+
+  /* --- Experience --- */
+
+  .experience {
+    z-index: 3;
+    min-height: 0;
+  }
+
+  .experience .container {
+    width: 90%;
+  }
+
+  .company-logo {
+    align-items: center;
+  }
+
+  .job {
+    margin: 0;
+    width: 50%;
+    display: inline-block;
+  }
+
+  .job-description {
+    padding: 0 3rem;
+  }
+
+  /* --- Projects --- */
+
+  .projects {
+    z-index: 4;
+    min-height: 0;
+    right: 0;
+  }
+
+  .project-tile {
+    width: 50%;
+    color: #2B2D42;
+    position: relative;
+  }
+
+  .project-tile-overlay {
+    top: -1rem;
+    opacity: 0;
+  }
+
+  .project-tile figure:hover .project-tile-overlay,
+  .project-tile figure.cs-hover .project-tile-overlay {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+
+  .project-links a:active {
+    color: #FFF;
+    background: #461e8e;
+  }
+
+  /* --- Contact --- */
+
+  .contact {
+    z-index: 5;
+  }
+
+  .contact .container {
+    max-width: 750px;
+  }
+
+  .social-icons a {
+    color: #2B2D42;
+  }
+
+  .social-icons ul li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+  }
+
+
+@media screen and (min-width: 1600px) {
+
+  html {
+    font-size: 85%;
+  }
+
+  body {
+    min-height: 670px;
+  }
+
+  .about .container {
+    max-width: 850px;
+  }
+
+  .navbar li {
+    margin: 2rem 0;
+  }
+
+  .project-tile {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .project-tile-overlay {
+    max-height: 300px;
+  }
+
+}
+
+@media screen and (min-width: 1800px) {
+
+  body {
+    min-height: 730px;
+  }
+
+  .project-tile {
+    max-width: 330px;
+    max-height: 330px;
+  }
+
+  .project-tile-overlay {
+    max-height: 330px;
+  }
+
+}
